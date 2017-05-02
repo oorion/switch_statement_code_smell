@@ -20,6 +20,10 @@ class Employee
     end
   end
 
+  def create(type)
+    Employee.new(type)
+  end
+
   private
 
   def monthly_salary
