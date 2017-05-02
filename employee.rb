@@ -11,8 +11,6 @@ class Employee
 
   def pay_amount
     case type
-    when Engineer
-      monthly_salary
     when Salesman
       monthly_salary + commission
     when Manager
@@ -53,6 +51,10 @@ class Engineer < Employee
 
   def initialize
     @type = 0
+  end
+
+  def pay_amount
+    monthly_salary
   end
 end
 
