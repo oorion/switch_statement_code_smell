@@ -9,15 +9,6 @@ class Employee
     @type = type
   end
 
-  def pay_amount
-    case type
-    when Salesman
-      monthly_salary + commission
-    when Manager
-      monthly salary + bonus
-    end
-  end
-
   def create(type)
     case type
     when Engineer
@@ -64,6 +55,10 @@ class Salesman < Employee
   def initialize
     @type = 1
   end
+
+  def pay_amount
+    monthly_salary + commission
+  end
 end
 
 class Manager < Employee
@@ -71,5 +66,9 @@ class Manager < Employee
 
   def initialize
     @type = 2
+  end
+
+  def pay_amount
+    monthly salary + bonus
   end
 end
