@@ -24,8 +24,12 @@ class Employee
     case type
     when Engineer
       Engineer.new
+    when Salesman
+      Salesman.new
+    when Manager
+      Manager.new
     else
-      Employee.new(type)
+      raise
     end
   end
 
@@ -49,5 +53,21 @@ class Engineer < Employee
 
   def initialize
     @type = 0
+  end
+end
+
+class Salesman < Employee
+  attr_reader :type
+
+  def initialize
+    @type = 1
+  end
+end
+
+class Manager < Employee
+  attr_reader :type
+
+  def initialize
+    @type = 2
   end
 end
