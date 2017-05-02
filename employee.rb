@@ -5,10 +5,6 @@ class Employee
 
   attr_reader :type
 
-  def initialize(type)
-    @type = type
-  end
-
   def create(type)
     case type
     when Engineer
