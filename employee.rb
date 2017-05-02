@@ -21,7 +21,12 @@ class Employee
   end
 
   def create(type)
-    Employee.new(type)
+    case type
+    when Engineer
+      Engineer.new
+    else
+      Employee.new(type)
+    end
   end
 
   private
@@ -36,5 +41,13 @@ class Employee
 
   def bonus
     2
+  end
+end
+
+class Engineer < Employee
+  attr_reader :type
+
+  def initialize
+    @type = 0
   end
 end
