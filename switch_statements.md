@@ -26,10 +26,5 @@ Then:
 * Employee example
 * product usage service
 * hokey pokey
-
-
-
-
-Notes
-Extract class is needed before you can fix the product usage service
-Notice that we're subclassing the employee class in our example.  Subclassing the product usage service seems like a bad first step because the logic that we're switching on seems to primarily relate to adding treatment reasons
+  - `git clone https://github.com/oorion/hokey_pokey_lesson.git`
+  - `git checkout new_requirement`
